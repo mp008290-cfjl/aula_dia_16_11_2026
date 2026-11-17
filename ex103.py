@@ -3,10 +3,10 @@ import os
 def busca_dados_arquivo():
     dados = {}
 
-    arquivo = open("paises-capitais.csv", mode="r", encoding="utf8")
+    arquivo = open("moedas - moedas.csv", mode="r", encoding="utf8")
     try:
         for linha in arquivo:
-            partes = linha.split(";")
+            partes = linha.split(",")
             if len(partes) == 3:
                 pais = partes[0]
                 sigla = partes[1]
@@ -19,7 +19,7 @@ def busca_dados_arquivo():
 
 
 
-print("programa para indicar a sigla do estado")
+print("as moedas de cada país e suas conversões")
 print()
 
 dados = busca_dados_arquivo()
